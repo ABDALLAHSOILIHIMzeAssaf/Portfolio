@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <title>Mzé Portfolio</title>
+
+    <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+    <script src="/_sdk/element_sdk.js" type="text/javascript"></script>
+    <script src="https://cdn.tailwindcss.com" type="text/javascript"></script>
+</head>
+
+<body><!-- Bouton Theme Toggle --> <button class="theme-toggle" onclick="toggleTheme()" id="themeToggle">🌙</button>
+    <!-- Navigation Desktop -->
+    <nav class="nav-desktop">
+        <ul>
+            <li><a href="#" onclick="showSection('accueil')" class="nav-link active">Accueil</a></li>
+            <li><a href="#" onclick="showSection('profil')" class="nav-link">Profil</a></li>
+            <li><a href="#" onclick="showSection('competences')" class="nav-link">Compétences</a></li>
+            <li><a href="#" onclick="showSection('experience')" class="nav-link">Expérience</a></li>
+            <li><a href="#" onclick="showSection('projets')" class="nav-link">Projets</a></li>
+            <li><a href="#" onclick="showSection('contact')" class="nav-link">Contact</a></li>
+        </ul>
+    </nav><!-- Navigation Mobile -->
+    <nav class="nav-mobile">
+        <ul>
+            <li><a href="#" onclick="showSection('accueil')" class="nav-link active"> <span class="icon">🏠</span>
+                    <span>Accueil</span> </a></li>
+            <li><a href="#" onclick="showSection('profil')" class="nav-link"> <span class="icon">👤</span>
+                    <span>Profil</span> </a></li>
+            <li><a href="#" onclick="showSection('competences')" class="nav-link"> <span class="icon">⚡</span>
+                    <span>Skills</span> </a></li>
+            <li><a href="#" onclick="showSection('experience')" class="nav-link"> <span class="icon">💼</span>
+                    <span>Exp.</span> </a></li>
+            <li><a href="#" onclick="showSection('projets')" class="nav-link"> <span class="icon">💻</span>
+                    <span>Projets</span> </a></li>
+            <li><a href="#" onclick="showSection('contact')" class="nav-link"> <span class="icon">📧</span>
+                    <span>Contact</span> </a></li>
+        </ul>
+    </nav>
+    <div class="container"><!-- Section Accueil -->
+        <section id="accueil" class="section active">
+            <div class="hero">
+                <div class="profile-img">
+                    👨🏾‍💻
+                </div>
+                <h1>Mzé Assaf</h1>
+                <p>Étudiant en Informatique passionné par le développement logiciel et l'intelligence artificielle</p><a
+                    href="#" class="btn" onclick="downloadCV(mon_cv.pdf)">📄 Télécharger mon CV</a>
+            </div>
+        </section><!-- Section Profil -->
+        <section id="profil" class="section">
+            <h2>À Propos de Moi</h2>
+            <div class="profile-content">
+                <p>Bonjour !</p>
+
+                <p>Je suis Mzé, étudiant en 1er année d'informatique (BTS SIO) au lycée Léonard de Vinci à Melun. Je me
+                    spécialise dans le développement logiciel et systeme réseau.</p>
+
+                <p>Passionné par la programmation et le développement logiciel depuis +5 ans. </p>
+
+                <p>Actuellement, je recherche un stage de 6 semaines (du 18 mai au 27 juin 2026) pour valider ma
+                    première année de BTS et mettre à profit mon savoir-faire en contribuant activement à de nouveaux
+                    projets
+                </p>
+
+                <p>Créatif, autonome, curieux et motivé.</p>
+
+                <p>Mon objectif est de devenir un développeur full-stack capable de créer des solutions innovantes qui
+                    ont un impact positif.</p>
+            </div>
+        </section>
+        <!-- Section Compétences -->
+        <section id="competences" class="section">
+            <h2>Mes Compétences</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>🌐 Frontend</h3>
+                    <div>
+                        HTML/CSS
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 100%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        JavaScript
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 100%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        Kotlin
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <h3>📈 Backend</h3>
+                    <div>
+                        Python
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 100%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        PHP
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 100%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        SQL
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <h3>🔐 Cybersécurité</h3>
+                    <div>
+                        OSINT
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 100%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        Cryptage (ROT13, Code de césar, Carré de Polybe)
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <h3>📈 IoT (Internet of Things )</h3>
+                    <div>
+                        Arduino (capteurs, actionneurs)
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 100%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        Réseaux (routeurs, switchs, IP, DNS, câblage)
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </section>
+        <!-- Section Expérience -->
+        <section id="experience" class="section">
+            <h2>Mon Expérience</h2>
+            <div class="experience-slider">
+                <div class="experience-container" id="experienceContainer">
+                    <div class="experience-card">
+                        <h3>Développeur Web Junior</h3>
+                        <div class="company">
+                            TechStart Solutions
+                        </div>
+                        <div class="date">
+                            Juin 2023 - Août 2023
+                        </div>
+                        <p>Stage de développement web où j'ai contribué à la création d'une application e-commerce.
+                            Utilisation de React et Node.js pour développer des fonctionnalités front-end et back-end.
+                            Collaboration avec une équipe de 5 développeurs dans un environnement agile.</p>
+                    </div>
+                    <div class="experience-card">
+                        <h3>Assistant Recherche IA</h3>
+                        <div class="company">
+                            Laboratoire d'IA - Université
+                        </div>
+                        <div class="date">
+                            Septembre 2023 - Présent
+                        </div>
+                        <p>Participation à un projet de recherche sur l'apprentissage automatique appliqué à la
+                            reconnaissance d'images. Développement de modèles de deep learning avec TensorFlow et
+                            analyse de données. Publication d'un article dans une conférence étudiante.</p>
+                    </div>
+                    <div class="experience-card">
+                        <h3>Freelance Développeur</h3>
+                        <div class="company">
+                            Projets Personnels
+                        </div>
+                        <div class="date">
+                            Janvier 2023 - Présent
+                        </div>
+                        <p>Création de sites web pour des petites entreprises locales. Développement de solutions sur
+                            mesure en utilisant diverses technologies web. Gestion complète des projets de la conception
+                            à la mise en production.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-controls"><button class="slider-btn" onclick="previousExperience()">‹</button> <button
+                    class="slider-btn" onclick="nextExperience()">›</button>
+            </div>
+        </section><!-- Section Projets -->
+        <section id="projets" class="section">
+            <h2>Mes Projets</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        🛒
+                    </div>
+                    <div class="project-content">
+                        <h3>E-Commerce Platform</h3>
+                        <p class="project-description">Plateforme e-commerce complète avec panier, paiement et gestion
+                            des stocks. Interface moderne et responsive.</p>
+                        <div class="project-tech"><span class="tech-tag">React</span> <span
+                                class="tech-tag">Node.js</span> <span class="tech-tag">MongoDB</span> <span
+                                class="tech-tag">Stripe</span>
+                        </div><button class="project-demo-btn" onclick="showDemo('E-Commerce Platform')">🚀 Voir la
+                            démo</button>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        🤖
+                    </div>
+                    <div class="project-content">
+                        <h3>Chatbot IA</h3>
+                        <p class="project-description">Assistant virtuel intelligent capable de répondre aux questions
+                            des utilisateurs en langage naturel.</p>
+                        <div class="project-tech"><span class="tech-tag">Python</span> <span
+                                class="tech-tag">TensorFlow</span> <span class="tech-tag">NLP</span> <span
+                                class="tech-tag">Flask</span>
+                        </div><button class="project-demo-btn" onclick="showDemo('Chatbot IA')">🚀 Voir la démo</button>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        📱
+                    </div>
+                    <div class="project-content">
+                        <h3>App Mobile Fitness</h3>
+                        <p class="project-description">Application mobile de suivi d'entraînement avec statistiques
+                            personnalisées et défis communautaires.</p>
+                        <div class="project-tech"><span class="tech-tag">React Native</span> <span
+                                class="tech-tag">Firebase</span> <span class="tech-tag">Chart.js</span>
+                        </div><button class="project-demo-btn" onclick="showDemo('App Mobile Fitness')">🚀 Voir la
+                            démo</button>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        🎮
+                    </div>
+                    <div class="project-content">
+                        <h3>Jeu Web Multijoueur</h3>
+                        <p class="project-description">Jeu de stratégie en temps réel jouable en ligne avec système de
+                            matchmaking et classements.</p>
+                        <div class="project-tech"><span class="tech-tag">JavaScript</span> <span
+                                class="tech-tag">Socket.io</span> <span class="tech-tag">Canvas</span> <span
+                                class="tech-tag">Express</span>
+                        </div><button class="project-demo-btn" onclick="showDemo('Jeu Web Multijoueur')">🚀 Voir la
+                            démo</button>
+                    </div>
+                </div>
+            </div>
+        </section><!-- Section Contact -->
+        <section id="contact" class="section">
+            <h2>Contactez-moi</h2>
+            <form class="contact-form" onsubmit="sendMessage(event)">
+                <div class="form-group"><label for="name">Nom complet</label> <input type="text" id="name" name="name"
+                        required>
+                </div>
+                <div class="form-group"><label for="email">Email</label> <input type="email" id="email" name="email"
+                        required>
+                </div>
+                <div class="form-group"><label for="message">Message</label> <textarea id="message" name="message"
+                        required></textarea>
+                </div><button type="submit" class="btn">Envoyer le message</button>
+            </form>
+        </section>
+    </div>
+
+    <SCRipt src="js/script.js"></SCRipt>
+    <script>(function () { function c() { var b = a.contentDocument || a.contentWindow.document; if (b) { var d = b.createElement('script'); d.innerHTML = "window.__CF$cv$params={r:'9bff17d6c0eb01c5',t:'MTc2ODc0OTgwMi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);"; b.getElementsByTagName('head')[0].appendChild(d) } } if (document.body) { var a = document.createElement('iframe'); a.height = 1; a.width = 1; a.style.position = 'absolute'; a.style.top = 0; a.style.left = 0; a.style.border = 'none'; a.style.visibility = 'hidden'; document.body.appendChild(a); if ('loading' !== document.readyState) c(); else if (window.addEventListener) document.addEventListener('DOMContentLoaded', c); else { var e = document.onreadystatechange || function () { }; document.onreadystatechange = function (b) { e(b); 'loading' !== document.readyState && (document.onreadystatechange = e, c()) } } } })();</script>
+</body>
+
+</html>
