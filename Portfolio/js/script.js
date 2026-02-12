@@ -54,53 +54,31 @@ function showSection(sectionName) {
     activeLinks.forEach(link => link.classList.add('active'));
 }
 
-function downloadCV() {
-    // Créer un CV factice pour la démonstration
-    const cvContent = `
-ALEX MARTIN - CV
-Étudiant en Informatique
-
-CONTACT:
-Email: alex.martin@email.com
-Téléphone: +33 6 12 34 56 78
-LinkedIn: linkedin.com/in/alexmartin
-
-FORMATION:
-2022-2025: Licence Informatique - Université de Technologie
-2020-2022: DUT Informatique - IUT Tech
-
-COMPÉTENCES:
-- Développement Web: HTML, CSS, JavaScript, React
-- Backend: Python, Node.js, SQL
-- IA & Data: Machine Learning, TensorFlow
-- Outils: Git, Docker, Linux
-
-EXPÉRIENCES:
-- Développeur Web Junior - TechStart Solutions (2023)
-- Assistant Recherche IA - Laboratoire Université (2023-présent)
-- Freelance Développeur (2023-présent)
-            `;
-
-    const blob = new Blob([cvContent], { type: 'text/plain' });
-    const url = window.URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = 'CV_Alex_Martin.txt';
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    window.URL.revokeObjectURL(url);
+function downloadCV(event) {
+    // Créer un lien temporaire vers le fichier PDF réel
+    const link = document.createElement('a');
+    link.href = './docs/Mze_ABDALLAH_CV.pdf';
+    link.download = 'CV_Mze_ABDALLAH_SOILIHI.pdf';
+    link.style.display = 'none';
+    
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
 
     // Message de confirmation sans alert
     const btn = event.target;
     const originalText = btn.textContent;
     btn.textContent = '✓ CV téléchargé !';
     btn.style.background = '#4caf50';
+    btn.style.color = 'white';
+    
     setTimeout(() => {
         btn.textContent = originalText;
         btn.style.background = '';
+        btn.style.color = '';
     }, 2000);
 }
+
 
 function nextExperience() {
     currentExperience = (currentExperience + 1) % totalExperiences;
