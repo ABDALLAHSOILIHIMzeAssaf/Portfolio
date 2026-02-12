@@ -4,27 +4,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/logo.jpg">
     <link rel="stylesheet" href="css/styles.css">
 
-    <title>Mzé Portfolio</title>
+    <title>Portfolio | Mzé Assaf</title>
 
     <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
     <script src="/_sdk/element_sdk.js" type="text/javascript"></script>
     <script src="https://cdn.tailwindcss.com" type="text/javascript"></script>
 </head>
 
-<body><!-- Bouton Theme Toggle --> <button class="theme-toggle" onclick="toggleTheme()" id="themeToggle">🌙</button>
+<body>
+    <!-- Bouton Theme Toggle -->
+    <button class="theme-toggle" onclick="toggleTheme()" id="themeToggle">🌙</button>
+
     <!-- Navigation Desktop -->
     <nav class="nav-desktop">
         <ul>
-            <li><a href="#" onclick="showSection('accueil')" class="nav-link active">Accueil</a></li>
-            <li><a href="#" onclick="showSection('profil')" class="nav-link">Profil</a></li>
-            <li><a href="#" onclick="showSection('competences')" class="nav-link">Compétences</a></li>
-            <li><a href="#" onclick="showSection('experience')" class="nav-link">Expérience</a></li>
-            <li><a href="#" onclick="showSection('projets')" class="nav-link">Projets</a></li>
-            <li><a href="#" onclick="showSection('contact')" class="nav-link">Contact</a></li>
+            <li><a href="#Accueil" onclick="showSection('accueil')" class="nav-link active">Accueil</a></li>
+            <li><a href="#Profil" onclick="showSection('profil')" class="nav-link">Profil</a></li>
+            <li><a href="#Competences" onclick="showSection('competences')" class="nav-link">Compétences</a></li>
+            <li><a href="#Experience" onclick="showSection('experience')" class="nav-link">Expérience</a></li>
+            <li><a href="#Projets" onclick="showSection('projets')" class="nav-link">Projets</a></li>
+            <li><a href="#Contact" onclick="showSection('contact')" class="nav-link">Contact</a></li>
         </ul>
-    </nav><!-- Navigation Mobile -->
+    </nav>
+
+    <!-- Navigation Mobile -->
     <nav class="nav-mobile">
         <ul>
             <li><a href="#" onclick="showSection('accueil')" class="nav-link active"> <span class="icon">🏠</span>
@@ -41,38 +47,67 @@
                     <span>Contact</span> </a></li>
         </ul>
     </nav>
-    <div class="container"><!-- Section Accueil -->
+    <div class="container">
+
+        <!-- Section Accueil -->
         <section id="accueil" class="section active">
             <div class="hero">
                 <div class="profile-img">
-                    👨🏾‍💻
+                    <img src="images/me.jpg" alt="">
                 </div>
-                <h1>Mzé Assaf</h1>
-                <p>Étudiant en Informatique passionné par le développement logiciel et l'intelligence artificielle</p><a
-                    href="#" class="btn" onclick="downloadCV(mon_cv.pdf)">📄 Télécharger mon CV</a>
+                <h1>Mzé ABDALLAH</h1>
+                <p>Étudiant BTS SIO 1re année – Passionné dev logiciel, IA & réseaux</p>
+                <p style="font-family: 'Playfair Display', Georgia, serif; 
+                font-style: italic;
+                font-size: 1.4em;
+                color: #68f391;">
+                    « Assez humble pour savoir que je ne suis pas le seul,
+                    mais assez confiant pour savoir qu'il n'y en a pas d'autre comme moi »
+                </p>
+                <a href="https://github.com/ABDALLAHSOILIHIMzeAssaf" class="btn" target="_blank">
+                    👨🏾‍💻 GITHUB
+                </a>
+
+                <a href="#" class="btn" onclick="downloadCV(event)" target="_blank">
+                    📄 Télécharger mon CV
+                </a>
+
+                <a href="https://www.linkedin.com/in/mz%C3%A9-assaf-abdallah-soilihi-aa713a251/" class="btn"
+                    target="_blank">
+                    🧑🏾 LINKEDIN
+                </a>
+
             </div>
-        </section><!-- Section Profil -->
+        </section>
+
+        <!-- Section Profil -->
         <section id="profil" class="section">
             <h2>À Propos de Moi</h2>
             <div class="profile-content">
                 <p>Bonjour !</p>
+                <br>
+                <p>Étudiant en <strong>1ère année BTS SIO option SLAM</strong> au lycée Léonard de Vinci à Melun (77).
+                    Spécialisation développement applicatif et réseaux.</p>
+                <br>
+                <p><strong>+5 projets portfolio réalisés :</strong> M-Avatar (générateur avatars Python/Tkinter), Pixel
+                    Art (jeu devinettes matrices 2D), commandes pâtisserie (PHP/MySQL), jeux interactifs GUI.</p>
+                <br>
+                <p>En recherche de <strong>stage de 6 semaines non-rémunéré</strong> du <strong>18 mai au 27 juin
+                        2026</strong> pour valider ma 1ère année BTS et intégrer vos projets de développement.</p>
+                <br>
+                <p><strong>Technos maîtrisées :</strong> Python 3/Tkinter (Canvas, widgets, ...), PHP 8/MySQL,
+                    HTML5/CSS3/JavaScript, Kotlin, Bootstrap 5, XAMPP, Git, Linux/PowerShell.</p>
+                <br>
+                <p><strong>Profil :</strong> Autonome (projets perso), curieux (cybersec/réseaux), motivé full-stack
+                    junior.</p>
+                <br>
+                <p><strong>Disponible immédiatement pour entretien.</strong> Pour plus d'échanges, contactez-moi : <a
+                        href="mailto:mze.abdallahsoilihi@gmail.com">mze.abdallahsoilihi@gmail.com</a></p>
 
-                <p>Je suis Mzé, étudiant en 1er année d'informatique (BTS SIO) au lycée Léonard de Vinci à Melun. Je me
-                    spécialise dans le développement logiciel et systeme réseau.</p>
 
-                <p>Passionné par la programmation et le développement logiciel depuis +5 ans. </p>
-
-                <p>Actuellement, je recherche un stage de 6 semaines (du 18 mai au 27 juin 2026) pour valider ma
-                    première année de BTS et mettre à profit mon savoir-faire en contribuant activement à de nouveaux
-                    projets
-                </p>
-
-                <p>Créatif, autonome, curieux et motivé.</p>
-
-                <p>Mon objectif est de devenir un développeur full-stack capable de créer des solutions innovantes qui
-                    ont un impact positif.</p>
             </div>
         </section>
+
         <!-- Section Compétences -->
         <section id="competences" class="section">
             <h2>Mes Compétences</h2>
@@ -144,128 +179,240 @@
 
 
         </section>
+
         <!-- Section Expérience -->
         <section id="experience" class="section">
             <h2>Mon Expérience</h2>
             <div class="experience-slider">
                 <div class="experience-container" id="experienceContainer">
+
+                    <!-- Stagiaire Développeur Informatique -->
                     <div class="experience-card">
-                        <h3>Développeur Web Junior</h3>
+                        <h3>Stagiaire Développeur Informatique</h3>
                         <div class="company">
-                            TechStart Solutions
+                            DIGITAL | Levallois-Perret (92)
                         </div>
                         <div class="date">
-                            Juin 2023 - Août 2023
+                            2021 - 2022
                         </div>
-                        <p>Stage de développement web où j'ai contribué à la création d'une application e-commerce.
-                            Utilisation de React et Node.js pour développer des fonctionnalités front-end et back-end.
-                            Collaboration avec une équipe de 5 développeurs dans un environnement agile.</p>
+                        <p>
+                            Initiation aux langages informatiques (Pascal) et à l’algorithmique
+                            (boucles, conditions, fonctions) dans un environnement professionnel.
+                        </p>
                     </div>
+
+                    <!-- Cyber Gendarme -->
                     <div class="experience-card">
-                        <h3>Assistant Recherche IA</h3>
+                        <h3>Cyber Gendarme</h3>
                         <div class="company">
-                            Laboratoire d'IA - Université
+                            Lycée Léonard de Vinci | Melun (77)
                         </div>
                         <div class="date">
-                            Septembre 2023 - Présent
+                            2025 - 2026
                         </div>
-                        <p>Participation à un projet de recherche sur l'apprentissage automatique appliqué à la
-                            reconnaissance d'images. Développement de modèles de deep learning avec TensorFlow et
-                            analyse de données. Publication d'un article dans une conférence étudiante.</p>
+                        <p>
+                            Connaissances juridiques et respect du cadre légal, participation à des cérémonies
+                            officielles
+                            comme le ravivage de la flamme. Activités avec des parrains de l’école de la gendarmerie,
+                            découverte des structures militaires et simulations d’enquêtes sur les comportements
+                            problématiques en ligne
+                            avec respect strict des procédures et de l’éthique.
+                        </p>
                     </div>
+
+                    <!-- Passe ton hack d’abord -->
                     <div class="experience-card">
-                        <h3>Freelance Développeur</h3>
+                        <h3>Passe ton hack d’abord</h3>
                         <div class="company">
-                            Projets Personnels
+                            Concours national (en ligne)
                         </div>
                         <div class="date">
-                            Janvier 2023 - Présent
+                            2023 - 2024
                         </div>
-                        <p>Création de sites web pour des petites entreprises locales. Développement de solutions sur
-                            mesure en utilisant diverses technologies web. Gestion complète des projets de la conception
-                            à la mise en production.</p>
+                        <p>
+                            7ᵉ place sur plus de 5000 participants. Exploitation d’une faille sur un site pour accéder à
+                            un compte bancaire
+                            sans identifiants, utilisation d’OSINT pour localiser un lieu de tournage à partir d’un clip
+                            vidéo
+                            et décryptage d’un message historique de guerre chiffré selon une méthode ancienne.
+                        </p>
                     </div>
+
                 </div>
             </div>
-            <div class="slider-controls"><button class="slider-btn" onclick="previousExperience()">‹</button> <button
-                    class="slider-btn" onclick="nextExperience()">›</button>
+            <div class="slider-controls">
+                <button class="slider-btn" onclick="previousExperience()">‹</button>
+                <button class="slider-btn" onclick="nextExperience()">›</button>
             </div>
-        </section><!-- Section Projets -->
+        </section>
+
+
+
+        <!-- Section Projets -->
         <section id="projets" class="section">
             <h2>Mes Projets</h2>
             <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-image">
-                        🛒
+                        <img style="height: 100%; width: 100%;" src="images/pixel_art.jpg" alt="">
                     </div>
                     <div class="project-content">
-                        <h3>E-Commerce Platform</h3>
-                        <p class="project-description">Plateforme e-commerce complète avec panier, paiement et gestion
-                            des stocks. Interface moderne et responsive.</p>
-                        <div class="project-tech"><span class="tech-tag">React</span> <span
-                                class="tech-tag">Node.js</span> <span class="tech-tag">MongoDB</span> <span
-                                class="tech-tag">Stripe</span>
-                        </div><button class="project-demo-btn" onclick="showDemo('E-Commerce Platform')">🚀 Voir la
-                            démo</button>
+                        <h3>Pixel Art</h3>
+                        <p class="project-description">
+                            Pixel Art est un jeu éducatif de devinettes en Python/Tkinter
+                            où le joueur associe des chiffres à des couleurs pour révéler
+                            des images pixelisées (oiseau, drapeau des Comores, Tintin).
+                            Le défi est aléatoire, avec compteur d'essais et feedback visuel progressif.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">GUI Python</span>
+                            <span class="tech-tag">Algorithmique Logique conditionnelle</span>
+                            <span class="tech-tag">Gestion événements</span>
+                        </div>
+                        <button class="project-demo-btn" onclick="showDemo('E-Commerce Platform')">
+                            <a href="https://github.com/ABDALLAHSOILIHIMzeAssaf/Mes_Projets/blob/main/Pixel_Art"
+                                target="_blank">
+                                🚀 Voir le code source
+                            </a>
+                        </button>
                     </div>
                 </div>
+
+
                 <div class="project-card">
                     <div class="project-image">
-                        🤖
+                        <img style="height: 100%; width: 100%;" src="images/saveur.jpg" alt="">
                     </div>
                     <div class="project-content">
-                        <h3>Chatbot IA</h3>
-                        <p class="project-description">Assistant virtuel intelligent capable de répondre aux questions
-                            des utilisateurs en langage naturel.</p>
-                        <div class="project-tech"><span class="tech-tag">Python</span> <span
-                                class="tech-tag">TensorFlow</span> <span class="tech-tag">NLP</span> <span
-                                class="tech-tag">Flask</span>
-                        </div><button class="project-demo-btn" onclick="showDemo('Chatbot IA')">🚀 Voir la démo</button>
+                        <h3>Saveurs de rêve</h3>
+                        <p class="project-description">
+                            Application web pour une pâtisserie permettant aux clients de passer
+                            directement leurs commandes en ligne via le site (sélection des produits,
+                            validation de commande, transmission au pâtissier).
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">REACT.JS</span>
+                            <span class="tech-tag">TAILWIND CSS</span>
+                        </div>
+                        <button class="project-demo-btn" onclick="showDemo('E-Commerce Platform')">
+                            <a href="https://saveur-de-reve.netlify.app/" target="_blank">
+                                🚀 Voir la démo
+                            </a>
+                        </button>
                     </div>
                 </div>
+
+
+
                 <div class="project-card">
                     <div class="project-image">
-                        📱
+                        <img style="height: 100%; width: 100%;" src="images/m_avatar.png" alt="">
                     </div>
                     <div class="project-content">
-                        <h3>App Mobile Fitness</h3>
-                        <p class="project-description">Application mobile de suivi d'entraînement avec statistiques
-                            personnalisées et défis communautaires.</p>
-                        <div class="project-tech"><span class="tech-tag">React Native</span> <span
-                                class="tech-tag">Firebase</span> <span class="tech-tag">Chart.js</span>
-                        </div><button class="project-demo-btn" onclick="showDemo('App Mobile Fitness')">🚀 Voir la
-                            démo</button>
+                        <h3>M-AVATAR</h3>
+                        <p class="project-description">
+                            M-Avatar est un générateur d'avatars interactif développé en Python
+                            avec Tkinter. Ce logiciel permet de personnaliser un visage cartoon
+                            en modifiant dynamiquement la forme de la tête, les yeux, les sourcils,
+                            la bouche, la couleur de peau, les positions et les accessoires.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Tkinter Canvas</span>
+                            <span class="tech-tag">Gestion événements</span>
+                            <span class="tech-tag">Debugging GUI</span>
+                        </div>
+                        <button class="project-demo-btn" onclick="showDemo('E-Commerce Platform')">
+                            <a href="https://github.com/ABDALLAHSOILIHIMzeAssaf/Mes_Projets/blob/main/Avatar_Perso"
+                                target="_blank">
+                                🚀 Voir le code source
+                            </a>
+                        </button>
                     </div>
                 </div>
+
+
+
                 <div class="project-card">
                     <div class="project-image">
-                        🎮
+                        <img style="height: 100%; width: 100%;" src="images/jeu_dame.jpg" alt="">
                     </div>
                     <div class="project-content">
-                        <h3>Jeu Web Multijoueur</h3>
-                        <p class="project-description">Jeu de stratégie en temps réel jouable en ligne avec système de
-                            matchmaking et classements.</p>
-                        <div class="project-tech"><span class="tech-tag">JavaScript</span> <span
-                                class="tech-tag">Socket.io</span> <span class="tech-tag">Canvas</span> <span
-                                class="tech-tag">Express</span>
-                        </div><button class="project-demo-btn" onclick="showDemo('Jeu Web Multijoueur')">🚀 Voir la
-                            démo</button>
+                        <h3>Jeu de Dames</h3>
+                        <p class="project-description">
+                            Application Tkinter implémentant un damier interactif avec pions personnalisables.
+                            Interface divisée en canevas de rendu (vert) et panneau de contrôles thématiques
+                            pour modifier dynamiquement les pièces via événements souris/clavier.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">GameDev Tkinter</span>
+                            <span class="tech-tag"> IA pions</span>
+                            <span class="tech-tag">UX interactive</span>
+                            <span class="tech-tag">Debug temps réel</span>
+                        </div>
+                        <button class="project-demo-btn" onclick="showDemo('E-Commerce Platform')">
+                            <a href="https://github.com/ABDALLAHSOILIHIMzeAssaf/Mes_Projets/blob/main/Jeu%20de%20Dames"
+                                target="_blank">
+                                🚀 Voir le code source
+                            </a>
+                        </button>
                     </div>
                 </div>
+
+
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img style="height: 100%; width: 100%;" src="images/autres_projets.png" alt="">
+                    </div>
+                    <div class="project-content">
+                        <h3>Autres projets</h3>
+                        <p class="project-description">
+                            Découvrez tous mes autres projets de développement (calculatrices avancées,
+                            jeux interactifs comme Pixel Art et Dames, générateurs d'avatars, applications
+                            web de commande, et logiciels variés) en consultant directement mon profil GitHub !
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Frontend + Backend</span>
+                            <span class="tech-tag">e-commerce basiques</span>
+                            <span class="tech-tag">Projets utilitaires</span>
+                            <span class="tech-tag">Réseaux/Systèmes</span>
+                            <span class="tech-tag">Bootstrap</span>
+                        </div>
+                        <button class="project-demo-btn" onclick="showDemo('E-Commerce Platform')">
+                            <a href="https://github.com/ABDALLAHSOILIHIMzeAssaf" target="_blank">
+                                🚀 plus de projets
+                            </a>
+                        </button>
+                    </div>
+                </div>
+
+
             </div>
-        </section><!-- Section Contact -->
+        </section>
+
+        <!-- Section Contact -->
         <section id="contact" class="section">
             <h2>Contactez-moi</h2>
-            <form class="contact-form" onsubmit="sendMessage(event)">
-                <div class="form-group"><label for="name">Nom complet</label> <input type="text" id="name" name="name"
-                        required>
+            <form class="contact-form" onsubmit="sendMessage(event)"
+                action="https://formsubmit.co/mze.abdallahsoilihi@gmail.com" method="post">
+                <div class="form-group">
+                    <label for="name">Nom complet</label>
+                    <input type="text" id="name" name="name" required>
                 </div>
-                <div class="form-group"><label for="email">Email</label> <input type="email" id="email" name="email"
-                        required>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
                 </div>
-                <div class="form-group"><label for="message">Message</label> <textarea id="message" name="message"
-                        required></textarea>
-                </div><button type="submit" class="btn">Envoyer le message</button>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" class="btn">Envoyer le message</button>
             </form>
         </section>
     </div>
